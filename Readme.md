@@ -64,12 +64,14 @@ void loop() {
   buttonState = digitalRead(buttonPin);
   Serial.println(buttonState);
 }
-'''
+```
+
 ## digitalWrite
 
 // digitalWrite(pin, value)
 // Writes a HIGH or LOW value to the specified digital pin.
-int ledPin = 13;
+```arduino
+int edPin = 13;
 
 void setup() {
   pinMode(ledPin, OUTPUT);
