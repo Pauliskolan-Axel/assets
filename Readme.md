@@ -49,3 +49,53 @@ void loop() {
   Serial.println(buttonState); // print button state to serial monitor
   delay(100); // wait for 100ms
 }
+
+// digitalRead(pin)
+// Returns HIGH or LOW depending on the voltage level at the specified digital pin.
+int buttonPin = 2;
+int buttonState;
+
+void setup() {
+  pinMode(buttonPin, INPUT_PULLUP);
+  Serial.begin(9600);
+}
+
+void loop() {
+  buttonState = digitalRead(buttonPin);
+  Serial.println(buttonState);
+}
+
+// digitalWrite(pin, value)
+// Writes a HIGH or LOW value to the specified digital pin.
+int ledPin = 13;
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(ledPin, HIGH);
+  delay(1000);
+  digitalWrite(ledPin, LOW);
+  delay(1000);
+}
+
+// analogRead(pin)
+// Returns a value between 0 and 1023 representing the voltage level at the specified analog pin.
+int analogPin = A0;
+int sensorValue;
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  sensorValue = analogRead(analogPin);
+  Serial.println(sensorValue);
+  delay(1000);
+}
+
+// analogWrite(pin, value)
+// Writes an analog value (PWM wave) to the specified pin.
+int ledPin = 9;
+int brightness =
